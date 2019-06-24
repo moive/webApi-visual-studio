@@ -20,8 +20,8 @@ namespace ProductsApp.Controllers
             return products;
         }
 
-
-        public IHttpActionResult getProduct(int id)
+        [HttpGet]
+        public IHttpActionResult productId(int id)
         {
             var product = products.FirstOrDefault((p) => p.Id == id);
             if (product == null)
